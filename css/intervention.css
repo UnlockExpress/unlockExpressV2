@@ -1,0 +1,480 @@
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  --gold:        #F5C518;
+  --gold-light:  #FFD94A;
+  --gold-dark:   #C9A000;
+  --red:         #E63946;
+  --red-dark:    #B52D38;
+  --navy:        #1A3A6B;
+  --navy-light:  #2453A3;
+  --black:       #0D0F14;
+  --dark:        #161B27;
+  --mid:         #2A2F3E;
+  --gray:        #6B7280;
+  --silver:      #9CA3AF;
+  --off-white:   #F7F8FA;
+  --white:       #FFFFFF;
+  --green:       #10B981;
+
+  --bg:          #FFFFFF;
+  --bg-alt:      #F7F8FA;
+  --bg-section:  #F0F2F5;
+  --border:      #E5E7EB;
+  --text:        #1a1f2e;
+  --text-muted:  #6B7280;
+
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+
+  --ease-out:    cubic-bezier(.22, 1, .36, 1);
+  --transition:  all .32s var(--ease-out);
+
+  --shadow-sm:   0 1px 6px rgba(0,0,0,.06);
+  --shadow-md:   0 4px 20px rgba(0,0,0,.09);
+  --shadow-lg:   0 10px 40px rgba(0,0,0,.13);
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--bg);
+  font-family: var(--roboto);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a    { color: inherit; text-decoration: none; }
+ul   { list-style: none; }
+img  { max-width: 100%; display: block; }
+
+
+/* ============================================================
+   1. ZONES D'INTERVENTION — section hero
+   ============================================================ */
+.zones-intervention {
+  background: var(--bg);
+  padding: clamp(4.5rem, 9vw, 7rem) clamp(1.2rem, 5vw, 3rem) clamp(3rem, 6vw, 5rem);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* halo décoratif */
+.zones-intervention::before {
+  content: '';
+  position: absolute;
+  top: -100px; left: 50%;
+  transform: translateX(-50%);
+  width: 800px; height: 400px;
+  background: radial-gradient(ellipse, rgba(26,58,107,.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.zones-intervention h2 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* soulignement doré */
+.zones-intervention h2::after {
+  content: '';
+  display: block;
+  width: 50px; height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin: .8rem auto 0;
+}
+
+.zones-texte {
+  font-size: 1rem;
+  color: var(--text-muted);
+  max-width: 540px;
+  margin: 0 auto 2rem;
+  line-height: 1.75;
+}
+
+/* CTA boutons */
+.zones-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .9rem;
+  margin-bottom: 3rem;
+}
+
+.btn-phone {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .85rem 2rem;
+  background: var(--navy);
+  color: var(--white);
+  font-size: .95rem;
+  font-weight: 700;
+  border-radius: 100px;
+  transition: var(--transition);
+  box-shadow: 0 4px 18px rgba(26,58,107,.25);
+}
+.btn-phone:hover { background: var(--navy-light); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(26,58,107,.35); }
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .85rem 2rem;
+  background: transparent;
+  color: var(--green);
+  font-size: .95rem;
+  font-weight: 700;
+  border-radius: 100px;
+  border: 1.5px solid var(--green);
+  transition: var(--transition);
+}
+.btn-whatsapp:hover { background: rgba(16,185,129,.08); transform: translateY(-2px); }
+
+/* Image carte */
+.oise {
+  max-width: 560px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+}
+
+.oise img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform .5s var(--ease-out);
+}
+.oise:hover img { transform: scale(1.02); }
+
+/* ============================================================
+   2. NOUS TROUVER — map Google
+   ============================================================ */
+.nous-trouver {
+  background: var(--bg-alt);
+  padding: clamp(3.5rem, 7vw, 5.5rem) clamp(1.2rem, 5vw, 3rem);
+  text-align: center;
+}
+
+.nous-trouver h2 {
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: .6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.nous-trouver h2 i { color: var(--red); font-size: 1.1em; }
+
+.adresse {
+  font-size: .9rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.map-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border);
+  position: relative;
+}
+
+/* ligne déco navy en haut de la map */
+.map-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--navy), var(--navy-light));
+  z-index: 1;
+}
+
+.map-wrapper iframe {
+  display: block;
+  width: 100%;
+  height: 460px;
+  border: none;
+}
+
+/* ============================================================
+   3. VILLES D'INTERVENTION
+   ============================================================ */
+.villes-intervention {
+  background: var(--bg);
+  padding: clamp(3.5rem, 7vw, 6rem) clamp(1.2rem, 5vw, 3rem);
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.villes-intervention h2 {
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+/* soulignement doré à gauche */
+.villes-intervention h2::after {
+  content: '';
+  display: block;
+  width: 44px; height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin-top: .7rem;
+}
+
+/* Grille des départements — 3 colonnes responsive */
+.villes-blocs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+/* Bloc département */
+.villes-bloc {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+/* accent coloré en haut — couleur navy */
+.villes-bloc::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--navy), var(--navy-light));
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.villes-bloc:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(26,58,107,.22);
+  transform: translateY(-3px);
+}
+.villes-bloc:hover::before { opacity: 1; }
+
+/* Header du bloc département */
+.villes-bloc h3 {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1.1rem;
+  padding-bottom: .8rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.villes-bloc h3 i {
+  color: var(--red);
+  font-size: .9rem;
+  flex-shrink: 0;
+}
+
+.villes-bloc h3 span {
+  margin-left: auto;
+  font-size: .75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: var(--bg-alt);
+  padding: .15rem .55rem;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+/* Liste des villes en colonnes internes */
+.villes-bloc ul {
+  display: flex;
+  gap: .2rem .8rem;
+  flex-wrap: wrap;
+}
+
+.villes-bloc ul div {
+  display: flex;
+  flex-direction: column;
+  gap: .28rem;
+  flex: 1 1 100px;
+}
+
+.villes-bloc ul li {
+  font-size: .82rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  padding: .15rem 0;
+  transition: color .2s;
+  cursor: default;
+  white-space: nowrap;
+}
+
+.villes-bloc:hover ul li { color: var(--text); }
+
+/* Paris 75 — bloc en pleine largeur pour ses 20 arrondissements */
+.villes-blocs .villes-bloc:first-child {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, rgba(26,58,107,.03) 0%, rgba(26,58,107,.01) 100%);
+  border-color: rgba(26,58,107,.15);
+}
+
+.villes-blocs .villes-bloc:first-child h3 { color: var(--navy); font-size: 1rem; }
+
+.villes-blocs .villes-bloc:first-child ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: .3rem .8rem;
+}
+
+.villes-blocs .villes-bloc:first-child ul div {
+  flex: unset;
+}
+
+/* ============================================================
+   FOOTER URGENCE
+   ============================================================ */
+.footer-urgence {
+  background: linear-gradient(135deg, var(--navy) 0%, #0e2147 100%);
+  text-align: center;
+  padding: clamp(3rem, 7vw, 5rem) clamp(1.4rem, 5vw, 3rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-urgence::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: 50%;
+  transform: translateX(-50%);
+  width: 500px; height: 300px;
+  background: radial-gradient(ellipse, rgba(245,197,24,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.footer-urgence::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.footer-urgence h3 {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: .7rem;
+  position: relative;
+}
+
+.footer-urgence p {
+  font-size: .9rem;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.footer-urgence-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+}
+
+.btn-urgence-call {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .9rem 2rem;
+  background: var(--gold);
+  color: var(--black);
+  font-size: .95rem;
+  font-weight: 700;
+  border-radius: 100px;
+  transition: var(--transition);
+  box-shadow: 0 6px 24px rgba(245,197,24,.3);
+}
+.btn-urgence-call:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(245,197,24,.45); }
+
+.btn-urgence-devis {
+  display: inline-flex;
+  align-items: center;
+  padding: .9rem 2rem;
+  background: transparent;
+  color: rgba(255,255,255,.8);
+  font-size: .95rem;
+  font-weight: 600;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,.25);
+  transition: var(--transition);
+}
+.btn-urgence-devis:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.45); color: var(--white); transform: translateY(-2px); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* ── 1024px ─────────────────────────────────────────────────── */
+@media (max-width: 1024px) {
+  .villes-blocs { grid-template-columns: repeat(2, 1fr); }
+
+  .villes-blocs .villes-bloc:first-child {
+    grid-column: 1 / -1;
+  }
+  .villes-blocs .villes-bloc:first-child ul {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── 768px ─────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .villes-blocs { grid-template-columns: 1fr; }
+
+  .villes-blocs .villes-bloc:first-child ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .map-wrapper iframe { height: 320px; }
+
+  .villes-bloc ul li { white-space: normal; }
+}
+
+/* ── 480px ─────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .zones-buttons { flex-direction: column; align-items: stretch; }
+  .btn-phone, .btn-whatsapp { width: 100%; justify-content: center; }
+
+  .villes-blocs .villes-bloc:first-child ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .villes-bloc ul div { flex: 1 1 130px; }
+
+  .footer-urgence-btns { flex-direction: column; align-items: stretch; }
+  .btn-urgence-call, .btn-urgence-devis { width: 100%; justify-content: center; }
+}

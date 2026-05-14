@@ -1,0 +1,30 @@
+:root {
+    --oldRegular : 'Parnelle'; 
+    --header-font : 'Parnelle';
+    --roboto : 'Inter';
+}
+
+
+html, body {
+    overflow-x: hidden;
+}
+
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Regular.woff2') format('woff2'),
+        url('Inter-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Parnelle';
+    src: url('Parnelle-Regular.woff2') format('woff2'),
+        url('Parnelle-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

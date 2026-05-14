@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Devis Serrurier Paris Gratuit | Unlock Express Île-de-France</title>
+  <link rel="stylesheet" href="../font/stylesheet.css">
+  <meta name="description"
+    content="Demandez votre devis serrurier gratuit à Paris. Réponse rapide, intervention en Île-de-France avec Unlock Express.">
+  <link rel="icon" type="image/x-icon" href="/unlock.jpg">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/devis.css">
+  <script src="../js/devis.js" defer></script>
+  <script src="../js/headerFooter.js" defer></script>
+  <link rel="stylesheet" href="../css/special.css">
+  <link rel="stylesheet" href="../css/headerFooter.css">
+  <script src="../js/faqAccordion.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav-container">
+      <a href="../index.html" class="logo">🔓 <span>Unlock Express</span></a>
+      <!-- Bouton hamburger -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+
+      <ul class="nav-links">
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="../index.html#why-us">Pourquoi Nous</a></li>
+        <li><a href="./tarifs.html">Tarifs</a></li>
+
+        <li><a href="../index.html#avis">Avis</a></li>
+        <li><a href="./intervention.html">Intervention</a></li>
+        <li><a href="./devis.html">Devis</a></li>
+        <li><a href="./faq.html">FAQ</a></li>
+        <li><a href="./blog.html">BLOG</a></li>
+      </ul>
+      <div class="emergency-contact">
+        <a href="tel:0759656065" class="cta-button primary">
+          <i class="fas fa-phone"></i> 07 59 65 60 65
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">Disponible 24h/24 – 7j/7</div>
+    <h1>Demandez votre <span>Devis Gratuit</span></h1>
+    <p>Intervention d'urgence ou travaux planifiés, notre équipe vous répond sous 30 minutes.</p>
+  </section>
+
+  <!-- PAGE CONTENT -->
+  <div class="page-wrap">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-title">Informations de Contact</div>
+
+      <a href="tel:0759656065" class="contact-card featured">
+        <div class="card-icon">📞</div>
+        <div>
+          <div class="card-label">Urgence 24h/24</div>
+          <div class="card-value">07 59 65 60 65</div>
+          <div class="card-sub">Intervention d'urgence</div>
+        </div>
+      </a>
+
+      <div class="contact-card">
+        <div class="card-icon">✉️</div>
+        <div>
+          <div class="card-label">Email</div>
+          <div class="card-value" style="font-size:13px">unlockexpress14@gmail.com</div>
+          <div class="card-sub">Réponse sous 30 min*</div>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">📍</div>
+        <div>
+          <div class="card-label" style="color:var(--blue)">Zone d'intervention</div>
+          <div class="card-value">Paris & Île-de-France</div>
+          <a href="./intervention.html" class="card-sub" style="color:var(--blue);cursor:pointer">Voir toutes nos zones
+            →</a>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="card-icon">🕐</div>
+        <div>
+          <div class="card-label" style="color:var(--accent)">Horaires d'urgence</div>
+          <div class="card-value">24h/24 – 7j/7</div>
+          <div class="card-sub" style="color:var(--success)">Toujours disponible</div>
+        </div>
+      </div>
+
+      <div class="trust-pills">
+        <div class="pill"><span class="icon">⚡</span><span>Réponse &lt; 30 min</span></div>
+        <div class="pill"><span class="icon">🏷️</span><span>Devis gratuit</span></div>
+        <div class="pill"><span class="icon">🛡️</span><span>Garantie 2 ans</span></div>
+        <div class="pill"><span class="icon">🔐</span><span>Serrurier certifié</span></div>
+      </div>
+    </aside>
+
+    <!-- MAIN FORM CARD -->
+    <div class="form-card">
+      <div class="form-header">
+        <div class="form-header-icon">📋</div>
+        <div>
+          <h2>Demande de Devis</h2>
+          <p>Remplissez le formulaire, nous générons votre devis PDF instantanément</p>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <form id="devisForm" class="form-body" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="e54bb663-6967-4263-84ec-2c7c8ce3a829">
+        <!-- STEPS NAV -->
+        <div class="steps-nav">
+          <button type="button" class="step-btn active" data-step="1">
+            <span class="step-num">1</span> Vos infos
+          </button>
+          <button type="button" class="step-btn" data-step="2">
+            <span class="step-num">2</span> Intervention
+          </button>
+        </div>
+
+        <!-- STEP 1 – INFOS CLIENT -->
+        <div class="step-panel active" id="step1">
+          <div class="form-row">
+            <div class="field" id="f_nom">
+              <label>Nom complet <span class="req">*</span></label>
+              <input type="text" name="nom_complet" placeholder="Votre nom et prénom" autocomplete="name">
+              <span class="err-msg">Ce champ est requis</span>
+            </div>
+            <div class="field" id="f_tel">
+              <label>Téléphone <span class="req">*</span></label>
+              <input type="tel" name="telephone" placeholder="06 XX XX XX XX" autocomplete="tel">
+              <span class="err-msg">Numéro invalide</span>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="field" id="f_email">
+              <label>Email <span class="req">*</span></label>
+              <input type="email" name="email" placeholder="votre@email.com" autocomplete="email">
+              <span class="err-msg">Email invalide</span>
+            </div>
+          </div>
+          <div class="form-row single">
+            <div class="field">
+              <label>Adresse d'intervention</label>
+              <input type="text" name="adresse" placeholder="N° rue, ville, code postal" autocomplete="street-address">
+              <span class="hint">Paris & Île-de-France uniquement</span>
+            </div>
+          </div>
+          <div class="form-nav">
+            <span></span>
+            <button type="button" class="btn btn-primary" onclick="goStep(2)">Suivant →</button>
+          </div>
+        </div>
+
+        <!-- STEP 2 – INTERVENTION -->
+        <div class="step-panel" id="step2" active>
+          <div class="form-row single">
+            <div class="field">
+              <label>Type d'intervention <span class="req">*</span></label>
+              <select name="type_intervention" id="typeIntervention">
+                <option value="">-- Sélectionnez --</option>
+                <option value="Ouverture de porte">Ouverture de porte</option>
+                <option value="Changement de serrure">Changement de serrure</option>
+                <option value="Installation serrure 3 points">Installation serrure 3 points</option>
+                <option value="Blindage de porte">Blindage de porte</option>
+                <option value="Remplacement cylindre">Remplacement cylindre</option>
+                <option value="Vitrerie / Vitrage">Vitrerie / Vitrage</option>
+                <option value="Autre">Autre intervention</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="form-row">
+            <div class="field">
+              <label>Date souhaitée</label>
+              <input type="date" name="date_debut_travaux" id="dateTravaux">
+            </div>
+            <div class="field">
+              <label>Créneau horaire</label>
+              <select name="creneau">
+                <option value="Matin (8h-12h)">Matin (8h-12h)</option>
+                <option value="Après-midi (12h-18h)">Après-midi (12h-18h)</option>
+                <option value="Soir (18h-22h)">Soir (18h-22h)</option>
+                <option value="Urgent – dès que possible" selected>Urgent – dès que possible</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row single">
+            <div class="field" id="f_desc">
+              <label>Description des travaux <span class="req">*</span></label>
+              <textarea name="description_travaux"
+                placeholder="Décrivez votre demande : type d'intervention, adresse, urgence…" required></textarea>
+              <span class="err-msg">Ce champ est requis</span>
+            </div>
+          </div>
+
+          <div class="form-nav">
+            <button type="button" class="btn btn-secondary" onclick="goStep(1)">← Retour</button>
+            <button type="submit" class="btn btn-primary" id="send">Envoyer →</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header fade-in">
+        <p>Questions fréquentes sur nos devis</p>
+      </div>
+      <div class="faq-grid">
+        <div class="faq-card fade-in" data-aos="fade-up">
+          <div class="faq-question">
+            <span>Le devis est-il vraiment gratuit et sans engagement ?</span>
+          </div>
+          <i class="fa-solid fa-plus"></i>
+          <span class="span"></span>
+          <hr>
+          <div class="faq-answer">
+            <p><strong>Oui</strong>, le devis est gratuit et sans engagement avant toute intervention.</p>
+          </div>
+        </div>
+
+        <div class="faq-card fade-in" data-aos="fade-up">
+          <div class="faq-question">
+            <span>Sous quel délai vais-je recevoir mon devis ?</span>
+          </div>
+          <i class="fa-solid fa-plus"></i>
+          <span class="span"></span>
+          <hr>
+          <div class="faq-answer">
+            <p>Le devis peut généralement être envoyé rapidement après l’analyse de votre demande et des informations
+              fournies.</p>
+          </div>
+        </div>
+
+        <div class="faq-card fade-in" data-aos="fade-up">
+          <div class="faq-question">
+            <span>Puis-je envoyer des photos pour un devis plus précis ?</span>
+          </div>
+          <i class="fa-solid fa-plus"></i>
+          <span class="span"></span>
+          <hr>
+          <div class="faq-answer">
+            <p><strong>Oui</strong>, l’envoi de photos permet souvent d’établir un devis plus précis et plus rapide.</p>
+          </div>
+        </div>
+
+        <div class="faq-card fade-in" data-aos="fade-up">
+          <div class="faq-question">
+            <span>Le devis est-il ferme ou peut-il changer ?</span>
+          </div>
+          <i class="fa-solid fa-plus"></i>
+          <span class="span"></span>
+          <hr>
+          <div class="faq-answer">
+            <p>Le devis reste valable sauf découverte d’un problème supplémentaire non visible avant intervention.</p>
+          </div>
+        </div>
+
+        <div class="faq-card fade-in" data-aos="fade-up">
+          <div class="faq-question">
+            <span>Quels services puis-je demander dans un devis ?</span>
+          </div>
+          <i class="fa-solid fa-plus"></i>
+          <span class="span"></span>
+          <hr>
+          <div class="faq-answer">
+            <p>Vous pouvez demander un devis pour une ouverture de porte, un changement de serrure, un blindage de porte
+              ou une sécurisation après effraction.</p>
+          </div>
+        </div>
+
+        <div class="faq-card fade-in" data-aos="fade-up">
+          <div class="faq-question">
+            <span>Puis-je demander un devis pour une copropriété ?</span>
+          </div>
+          <i class="fa-solid fa-plus"></i>
+          <span class="span"></span>
+          <hr>
+          <div class="faq-answer">
+            <p><strong>Oui</strong>, des devis peuvent être réalisés pour les copropriétés, immeubles et parties
+              communes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <main>
+    <section>
+      <h2 class="section-title">
+        <span class="section-icon">🔑</span>
+        Nos services de serrurerie
+      </h2>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <span class="service-card-icon">🚪</span>
+          <div>
+            <a href="#">Ouverture de porte</a>
+            <p class="price">Dès 120€</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card-icon">🔒</span>
+          <div>
+            <a href="#">Changement de serrure</a>
+            <p class="price">Dès 180€</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card-icon">🛡️</span>
+          <div>
+            <a href="#">Blindage de porte</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card-icon">⚙️</span>
+          <div>
+            <a href="#">Remplacement de cylindre</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card-icon">🔧</span>
+          <div>
+            <a href="#">Réparation de serrure</a>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card-icon">🏃</span>
+          <div>
+            <a href="#">Porte claquée</a>
+            <p class="price">Intervention rapide</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card-icon">🪟</span>
+          <div>
+            <a href="#">Vitrier urgence</a>
+            <p class="price">Remplacement vitre</p>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <span class="service-card-icon">🔲</span>
+          <div>
+            <a href="/#">Double vitrage</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section>
+      <h2 class="section-title">
+        <span class="section-icon">📍</span>
+        Zones d'intervention
+      </h2>
+      <p class="zones-intro">
+        Nous intervenons dans tout Paris (1<sup>er</sup> au 20<sup>e</sup> arrondissement) et en Île-de-France :
+        Boulogne-Billancourt, Versailles, Nanterre, Saint-Denis, Créteil, Montreuil, Argenteuil, Courbevoie,
+        Levallois-Perret, Neuilly-sur-Seine, Issy-les-Moulineaux, Vincennes, Sarcelles, Évry, Cergy,
+        et plus de 80 communes.
+      </p>
+      <div class="zones-links">
+        <span>Serrurier Paris 15</span>
+        <span>Serrurier Paris 8</span>
+        <span>Serrurier Paris 16</span>
+        <span>Serrurier Paris 17</span>
+        <span>Serrurier Versailles</span>
+        <span>Serrurier Nanterre</span>
+        <span>Serrurier Boulogne-Billancourt</span>
+        <a href="./intervention.html" class="all">→ Toutes nos zones d'intervention</a>
+      </div>
+    </section>
+
+
+    <section>
+      <h2 class="section-title">
+        <span class="section-icon">✅</span>
+        Pourquoi choisir Unlock Express ?
+      </h2>
+      <div class="trust-grid">
+
+        <div class="trust-item">
+          <span class="trust-icon">⭐</span>
+          <div class="trust-text">
+            <strong><span class="stars">★★★★★</span> 5/5 sur Google</strong>
+            <span>Plus de 30 avis clients vérifiés</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-icon">⚡</span>
+          <div class="trust-text">
+            <strong>Intervention en moins de 30 minutes</strong>
+            <span>À Paris et proche banlieue</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-icon">💬</span>
+          <div class="trust-text">
+            <strong>Devis gratuit et transparent</strong>
+            <span>Avant toute intervention</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-icon">🏅</span>
+          <div class="trust-text">
+            <strong>Artisan certifié</strong>
+            <span>Assuré RC Pro et garantie décennale</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-icon">💰</span>
+          <div class="trust-text">
+            <strong>Prix fixes affichés</strong>
+            <span>Sans surprise ni majoration abusive</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-icon">🧾</span>
+          <div class="trust-text">
+            <strong>Facture pour assurance</strong>
+            <span>Fournie sur place</span>
+          </div>
+        </div>
+
+        <div class="trust-item">
+          <span class="trust-icon">💳</span>
+          <div class="trust-text">
+            <strong>Paiement CB, espèces ou virement</strong>
+            <span>Accepté</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- j'ai fait exprès de reprendre les mêmes pages que je t'ai dit qu'il faut que tu crées. -->
+    <div class="links-row">
+      <a href="./tarifs.html">Consultez nos tarifs</a>
+      <span class="sep">|</span>
+      <span class="sep">|</span>
+      <a href="../index.html?#avis">Avis clients</a>
+      <span class="sep">|</span>
+      <a href="./devis.html">Devis gratuit</a>
+      <span class="sep">|</span>
+      <a href="./blog.html">Blog serrurerie</a>
+    </div>
+
+  </main>
+
+
+  <!--Avant footer-->
+  <div class="topbar" data-aos="fade-up">
+
+    <div class="topbar-container">
+
+      <span class="badge-free">GRATUIT</span>
+
+      <span class="badge-urgence">
+        <i class="fa-solid fa-bolt"></i> Urgence 24/7
+      </span>
+
+
+      <a href="tel:0759656065" class="topbar-phone">
+        <i class="fa-solid fa-phone"></i> 07 59 65 60 65
+      </a>
+
+      <a href="https://wa.me/33759656065" class="topbar-whatsapp">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- Footer-->
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <!-- Unlock Express -->
+      <div class="footer-col">
+        <h3>Unlock Express</h3>
+        <p>
+          Spécialiste du dépannage d'urgence en serrurerie et vitrerie.<br>
+          Service professionnel 24h/24 et 7j/7 à Paris et Île‑de‑France.
+        </p>
+      </div>
+
+      <!-- SERVICES -->
+      <div class="footer-col">
+        <h3>Nos Services</h3>
+        <ul>
+          <li>Ouverture porte</li>
+          <li>Changement serrure</li>
+          <li>Vitrerie d'urgence</li>
+          <li>Après effraction</li>
+          <li>Porte palière</li>
+          <li>Blindage porte</li>
+          <li>Remplacement vitre</li>
+          <li>Cornières anti‑pince</li>
+          <li>Volets roulants</li>
+          <li>Tarifs serrurerie</li>
+        </ul>
+      </div>
+
+      <!-- ZONES -->
+      <div class="footer-col">
+        <h3>Zones d’intervention</h3>
+        <ul>
+          <li>Paris (1er – 20e)</li>
+          <li>92 – Hauts‑de‑Seine</li>
+          <li>93 – Seine‑St‑Denis</li>
+          <li>94 – Val‑de‑Marne</li>
+          <li>91 / 78 / 95</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Informations</h3>
+        <ul>
+          <li>
+            <a href="./mention.html">Mentions légales</a>
+          </li>
+          <li>
+            <a href="../index.html#contact">Contact</a>
+          </li>
+          <li>
+            Disponible 7j/7 - 24h/24
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="footer-social">
+        <a href="https://snapchat.com/add/unlock-express" target="_blank"><i class="snap fa-brands fa-snapchat"></i></a>
+        <a href="mailto:unlockexpress14@gmail.com"><i class="envelope fa-solid fa-envelope"></i></a>
+      </div>
+      <div class="rights">
+        © 2026 UNLOCK EXPRESS. Tous droits réservés.
+      </div>
+
+      <div class="footer-reviews">
+        <strong><span class="stars">★★★★★</span>5.0/5</strong> — <a
+          href="https://www.google.com/maps/place/UNLOCK+EXPRESS/@48.8881307,2.0171826,11z/data=!4m8!3m7!1s0x684de0cae842f449:0xcb4e2cd9e7898a0f!8m2!3d48.8588418!4d2.1573583!9m1!1b1!16s%2Fg%2F11yk38m6p6?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D">Voir
+          les avis</a> • <a
+          href="https://www.google.com/maps/place/UNLOCK+EXPRESS/@48.8881307,2.0171826,11z/data=!4m8!3m7!1s0x684de0cae842f449:0xcb4e2cd9e7898a0f!8m2!3d48.8588418!4d2.1573583!9m1!1b1!16s%2Fg%2F11yk38m6p6?entry=ttu&g_ep=EgoyMDI2MDMwNC4xIKXMDSoASAFQAw%3D%3D">Laisser
+          un avis</a>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!--BOUTON DE NAVIGATION-->
+  <div class="nav-buttons">
+    <button id="scroll-down" class="nav-btn down">
+      <i class="fa-solid fa-chevron-down"></i>
+    </button>
+
+    <button id="scroll-up" class="nav-btn up">
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
+  </div>
+</body>
+
+</html>

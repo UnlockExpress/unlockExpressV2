@@ -1,0 +1,358 @@
+:root {
+    --primary-gold: #facc15;
+    --primary-gold-dark: #eab308;
+    --danger-red: #ef4444;
+    --danger-red-dark: #dc2626;
+    --black: #111827;
+    --dark-gray: #1f2937;
+    --gray: #6b7280;
+    --light-gray: #f3f4f6;
+    --white: #ffffff;
+} 
+
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--black);
+    color: white;
+    position: relative;
+}
+
+
+.return {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    text-decoration: none;
+}
+
+/*AVIS*/
+/* =========================
+   AVIS CLIENTS – SERRURERIE
+   ========================= */
+
+.temoignages {
+    padding: 80px 20px;
+    background: #0f172a; /* bleu nuit sérieux */
+    color: #e5e7eb;
+    cursor: pointer;
+}
+
+.temoignages .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 10px;
+    font-family: monospace;
+}
+
+
+
+.section-header p {
+    color: #9ca3af;
+    font-size: 1.05rem;
+}
+
+/* ---------- Grid ---------- */
+.temoignages-grid {
+  
+}
+.avis {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    gap: 20px;
+    justify-content: center;
+}
+/* ---------- Cards ---------- */
+.temoignage-card {
+    background: linear-gradient(145deg, #020617, #020617);
+    border-radius: 18px;
+    padding: 22px 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    width: 285px;
+    max-width: 700px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.temoignage-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Stars ---------- */
+.stars {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fbbf24;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stars .hours {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+/* ---------- Text ---------- */
+.temoignage-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #e5e7eb;
+    margin-bottom: 16px;
+}
+
+/* ---------- Client ---------- */
+.client-info {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.client-info strong {
+    color: #f8fafc;
+    font-weight: 600;
+}
+
+/* ---------- Button ---------- */
+.review {
+    display: block;
+    width: fit-content;
+    margin: 50px auto 0;
+    padding: 14px 34px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #020617;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(251, 191, 36, 0.35);
+}
+
+/* ---------- Fade-in animation ---------- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(25px);
+    animation: fadeUp 0.7s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .temoignage-card {
+        padding: 18px;
+    }
+}
+
+
+
+
+
+/*footer*/
+.footer {
+    height: max-content;
+    width: 100%;
+    align-content: center;
+    box-shadow: 5px -10px 20px #111;
+    background-color: var(--black);
+    padding: 15px 0;
+    color: var(--white);
+    position: absolute;
+    bottom: 0;
+}
+
+.footer>.container {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.footer>.container p a {
+    color: #eab308;
+    transition: background .3s ease-in-out;
+    padding: 10px 20px;
+    border-radius: 20px;
+    word-wrap: break-word;
+
+    &:hover {
+       color: #b08400;
+    }
+}
+
+
+/*FORM*/
+/* =========================
+   FORMULAIRE AVIS CLIENT
+   ========================= */
+
+.avis-form-wrapper {
+    margin-top: 70px;
+    padding: 40px 30px;
+    background: #020617;
+    border-radius: 20px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    width: 100%;
+    display: block;
+}
+
+.avis-form-wrapper h3 {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #f8fafc;
+    margin-bottom: 10px;
+}
+
+.avis-form-wrapper h3 i {
+    color: #fbbf24;
+    margin-right: 6px;
+}
+
+.avis-subtitle {
+    text-align: center;
+    color: #9ca3af;
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+}
+
+/* ---------- Form ---------- */
+.avis-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.avis-form input,
+.avis-form textarea {
+    flex: 1;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: none;
+    background: #020617;
+    color: #f8fafc;
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.avis-form input::placeholder,
+.avis-form textarea::placeholder {
+    color: #9ca3af;
+}
+
+.avis-form input:focus,
+.avis-form textarea:focus {
+    outline: none;
+    border-color: #fbbf24;
+}
+textarea {
+    line-height: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.3rem;
+}
+
+/* ---------- Rating ---------- */
+.rating-label {
+    color: #e5e7eb;
+    font-size: 0.9rem;
+    margin-right: 10px;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 6px;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 1.6rem;
+    color: #374151;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #fbbf24;
+}
+
+/* ---------- Submit ---------- */
+.avis-submit {
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    color: #020617;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.avis-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(251, 191, 36, 0.35);
+}
+
+/* ---------- Legal ---------- */
+.avis-legal {
+    margin-top: 10px;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #9ca3af;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+    }
+}

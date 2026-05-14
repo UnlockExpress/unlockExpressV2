@@ -1,0 +1,715 @@
+
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  --gold:        #F5C518;
+  --gold-light:  #FFD94A;
+  --gold-dark:   #C9A000;
+  --red:         #E63946;
+  --red-dark:    #B52D38;
+  --navy:        #1A3A6B;
+  --navy-light:  #2453A3;
+  --black:       #0D0F14;
+  --dark:        #161B27;
+  --mid:         #2A2F3E;
+  --gray:        #6B7280;
+  --silver:      #9CA3AF;
+  --off-white:   #F7F8FA;
+  --white:       #FFFFFF;
+  --green:       #10B981;
+
+  /* Tokens page claire */
+  --bg:          #FFFFFF;
+  --bg-alt:      #F7F8FA;
+  --bg-section:  #F0F2F5;
+  --border:      #E5E7EB;
+  --text:        #1a1f2e;
+  --text-muted:  #6B7280;
+
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+
+  --ease-out:    cubic-bezier(.22, 1, .36, 1);
+  --transition:  all .32s var(--ease-out);
+
+  --shadow-sm:   0 1px 6px rgba(0,0,0,.06);
+  --shadow-md:   0 4px 20px rgba(0,0,0,.09);
+  --shadow-lg:   0 10px 40px rgba(0,0,0,.12);
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--roboto);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 clamp(1.2rem, 5vw, 3rem);
+}
+
+
+
+/* ── Icônes colorées ───────────────────────────────────────── */
+.red-i  { color: var(--red); }
+.blue-i { color: var(--navy-light); }
+.grey-i { color: var(--gray); }
+
+/* ── Titres de section (pattern commun) ────────────────────── */
+.section-heading {
+  text-align: center;
+  margin-bottom: clamp(2rem, 5vw, 3.5rem);
+}
+
+/* h2 inline icon + texte — adapté ici directement sur les h2 */
+
+/* ============================================================
+   1. SERVICES RAPIDES (accès rapide)
+   ============================================================ */
+.services {
+  background: var(--bg);
+  padding: clamp(4rem, 8vw, 7rem) 0 clamp(3rem, 6vw, 5rem);
+}
+
+.services h2 {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: .5rem;
+}
+
+.services .subtitle {
+  color: var(--text-muted);
+  font-size: .95rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+/* Grid 4 colonnes → 2 → 1 */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+/* Card service rapide */
+.services .service-card,
+.services-grid .service-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.services .service-card::before,
+.services-grid .service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--navy), var(--navy-light));
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.services .service-card:hover,
+.services-grid .service-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(26,58,107,.2);
+  transform: translateY(-4px);
+}
+
+.services .service-card:hover::before,
+.services-grid .service-card:hover::before { opacity: 1; }
+
+.services .service-card h3,
+.services-grid .service-card h3 {
+  font-size: .97rem;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.services .service-card p,
+.services-grid .service-card p {
+  font-size: .84rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+.services .service-card .price,
+.services-grid .service-card .price {
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--navy);
+  background: rgba(26,58,107,.07);
+  padding: .22rem .7rem;
+  border-radius: 100px;
+  border: 1px solid rgba(26,58,107,.15);
+}
+
+/* Boutons dans les cards */
+.actions {
+  display: flex;
+  gap: .5rem;
+  margin-top: .4rem;
+  flex-wrap: wrap;
+}
+
+/* ── Boutons génériques ─────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .4rem;
+  padding: .55rem 1rem;
+  border-radius: 100px;
+  font-size: .8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  flex: 1 1 auto;
+}
+
+.btn.call {
+  background: var(--navy);
+  color: var(--white);
+  border: none;
+}
+.btn.call:hover { background: var(--navy-light); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(26,58,107,.3); }
+
+.btn.whatsapp {
+  background: transparent;
+  color: var(--green);
+  border: 1.5px solid var(--green);
+}
+.btn.whatsapp:hover { background: rgba(16,185,129,.08); transform: translateY(-1px); }
+
+/* ============================================================
+   2. SECTION HERO IDF
+   ============================================================ */
+.hero-idf {
+  background: linear-gradient(135deg, var(--navy) 0%, #0e2147 100%);
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-idf::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(245,197,24,.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ligne déco haut */
+.hero-idf::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.hero-idf .container { position: relative; z-index: 1; }
+
+.hero-idf h1 {
+  font-size: clamp(1.7rem, 4vw, 2.9rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 1.1rem;
+}
+
+.hero-idf .subtitle {
+  font-size: clamp(.9rem, 2vw, 1.05rem);
+  color: rgba(255,255,255,.6);
+  max-width: 620px;
+  margin: 0 auto;
+  line-height: 1.75;
+}
+
+/* ============================================================
+   3. SERVICES D'URGENCE
+   ============================================================ */
+.urgence-services {
+  background: var(--bg-alt);
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+}
+
+.urgence-services h2 {
+  text-align: center;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: .4rem;
+}
+
+.urgence-services h2:first-child { margin-bottom: .2rem; }
+
+.urgence-services .subtitle {
+  text-align: center;
+  font-size: .88rem;
+  color: var(--text-muted);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+/* Grid urgence — 4 colonnes égales */
+.urgence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.1rem;
+}
+
+/* Card urgence */
+.urgence-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.8rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.urgence-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--red), var(--red-dark));
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.urgence-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(230,57,70,.2);
+  transform: translateY(-4px);
+}
+
+.urgence-card:hover::after { opacity: 1; }
+
+/* Badge URGENCE */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .3rem;
+  align-self: flex-start;
+  padding: .2rem .7rem;
+  background: rgba(230,57,70,.1);
+  border: 1px solid rgba(230,57,70,.3);
+  border-radius: 100px;
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  color: var(--red);
+  text-transform: uppercase;
+}
+
+.badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .4; transform: scale(.7); }
+}
+
+.urgence-card h3 {
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+.urgence-card .desc {
+  font-size: .84rem;
+  color: var(--text-muted);
+  flex: 1;
+  line-height: 1.6;
+}
+
+.urgence-card .price {
+  display: inline-block;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--red-dark);
+  background: rgba(230,57,70,.07);
+  padding: .2rem .7rem;
+  border-radius: 100px;
+  border: 1px solid rgba(230,57,70,.18);
+}
+
+/* Bouton urgence card */
+.btn-call {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .65rem 1.1rem;
+  background: var(--red);
+  color: var(--white);
+  border-radius: 100px;
+  font-size: .82rem;
+  font-weight: 700;
+  transition: var(--transition);
+  margin-top: .4rem;
+}
+
+.btn-call:hover {
+  background: var(--red-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(230,57,70,.35);
+}
+
+/* ============================================================
+   4. SECTION CTA INTERVENTION URGENTE
+   ============================================================ */
+.intervention-urgence {
+  background: var(--bg);
+  padding: clamp(3rem, 6vw, 5rem) 0;
+}
+
+.urgence-box {
+  background: linear-gradient(135deg, #fff5f5 0%, #fff8f8 100%);
+  border: 1.5px solid rgba(230,57,70,.2);
+  border-radius: var(--radius-xl);
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.urgence-box::before {
+  content: '';
+  position: absolute;
+  top: -60px; left: 50%;
+  transform: translateX(-50%);
+  width: 400px; height: 200px;
+  background: radial-gradient(ellipse, rgba(230,57,70,.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.icon-wrap {
+  width: 60px; height: 60px;
+  background: rgba(230,57,70,.1);
+  border: 1.5px solid rgba(230,57,70,.25);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 1.4rem;
+  font-size: 1.4rem;
+  color: var(--red);
+  position: relative;
+}
+
+.urgence-box h2 {
+  font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: .7rem;
+  position: relative;
+}
+
+.urgence-box .subtitle {
+  font-size: .9rem;
+  color: var(--text-muted);
+  max-width: 480px;
+  margin: 0 auto 2rem;
+  line-height: 1.75;
+  position: relative;
+}
+
+.cta-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .9rem;
+  position: relative;
+}
+
+.btn.btn-red {
+  background: var(--red);
+  color: var(--white);
+  border: none;
+  padding: .8rem 1.8rem;
+  border-radius: 100px;
+  font-size: .92rem;
+  box-shadow: 0 4px 18px rgba(230,57,70,.3);
+}
+.btn.btn-red:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(230,57,70,.4); }
+
+.btn.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  padding: .8rem 1.8rem;
+  border-radius: 100px;
+  font-size: .92rem;
+}
+.btn.btn-outline:hover { border-color: var(--text-muted); background: var(--bg-alt); transform: translateY(-2px); }
+
+/* ============================================================
+   5. SERVICES STANDARDS
+   ============================================================ */
+.services-standards {
+  background: var(--bg-section);
+  padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+}
+
+.services-standards h2 {
+  text-align: center;
+  font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+  font-weight: 400;
+  color: var(--dark);
+  margin-bottom: .4rem;
+}
+
+.services-standards .subtitle {
+  text-align: center;
+  font-size: .88rem;
+  color: var(--text-muted);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+/* Grid 5 colonnes → 3 → 2 → 1 */
+.standards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.1rem;
+}
+
+/* Card standard — même base que service rapide mais variante grise */
+.services-standards .service-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem 1.4rem 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: .55rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.services-standards .service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold));
+  opacity: 0;
+  transition: opacity .3s ease;
+}
+
+.services-standards .service-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(245,197,24,.35);
+  transform: translateY(-4px);
+}
+
+.services-standards .service-card:hover::before { opacity: 1; }
+
+.services-standards .service-card h3 {
+  font-size: .92rem;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: .45rem;
+  line-height: 1.35;
+}
+
+.services-standards .service-card .desc {
+  font-size: .82rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.services-standards .service-card .price {
+  display: inline-block;
+  font-size: .78rem;
+  font-weight: 700;
+  color: var(--gold-dark);
+  background: rgba(245,197,24,.1);
+  padding: .2rem .65rem;
+  border-radius: 100px;
+  border: 1px solid rgba(245,197,24,.3);
+}
+
+/* Bouton devis dans les cards standards */
+.services-standards .btn.call {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--navy);
+  padding: .55rem .9rem;
+  font-size: .8rem;
+  border-radius: 100px;
+  margin-top: auto;
+}
+.services-standards .btn.call:hover {
+  background: var(--navy);
+  color: var(--white);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(26,58,107,.25);
+}
+
+/* ============================================================
+   FOOTER URGENCE
+   ============================================================ */
+.footer-urgence {
+  background: linear-gradient(135deg, var(--navy) 0%, #0e2147 100%);
+  text-align: center;
+  padding: clamp(3rem, 7vw, 5rem) clamp(1.4rem, 5vw, 3rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-urgence::before {
+  content: '';
+  position: absolute;
+  top: -80px; left: 50%;
+  transform: translateX(-50%);
+  width: 500px; height: 300px;
+  background: radial-gradient(ellipse, rgba(245,197,24,.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.footer-urgence::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.footer-urgence h3 {
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: .7rem;
+  position: relative;
+}
+
+.footer-urgence p {
+  font-size: .9rem;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.footer-urgence-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  position: relative;
+}
+
+.btn-urgence-call {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .9rem 2rem;
+  background: var(--gold);
+  color: var(--black);
+  font-size: .95rem;
+  font-weight: 700;
+  border-radius: 100px;
+  transition: var(--transition);
+  box-shadow: 0 6px 24px rgba(245,197,24,.3);
+}
+.btn-urgence-call:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(245,197,24,.45); }
+
+.btn-urgence-devis {
+  display: inline-flex;
+  align-items: center;
+  padding: .9rem 2rem;
+  background: transparent;
+  color: rgba(255,255,255,.8);
+  font-size: .95rem;
+  font-weight: 600;
+  border-radius: 100px;
+  border: 1px solid rgba(255,255,255,.25);
+  transition: var(--transition);
+}
+.btn-urgence-devis:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.45); color: var(--white); transform: translateY(-2px); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* ── 1200px — 5 cols standards → 4 ────────────────────────── */
+@media (max-width: 1200px) {
+  .standards-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ── 1024px — 4 cols → 3 ────────────────────────────────── */
+@media (max-width: 1024px) {
+  .services-grid  { grid-template-columns: repeat(3, 1fr); }
+  .urgence-grid   { grid-template-columns: repeat(2, 1fr); }
+  .standards-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* ── 768px — passage en 2 colonnes ─────────────────────────── */
+@media (max-width: 768px) {
+  .services-grid  { grid-template-columns: repeat(2, 1fr); }
+  .urgence-grid   { grid-template-columns: repeat(2, 1fr); }
+  .standards-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .urgence-box { padding: 2rem 1.5rem; }
+  .cta-buttons { flex-direction: column; align-items: stretch; }
+  .btn.btn-red, .btn.btn-outline { width: 100%; justify-content: center; }
+}
+
+/* ── 480px — 1 colonne ─────────────────────────────────────── */
+@media (max-width: 480px) {
+  .services-grid  { grid-template-columns: 1fr; }
+  .urgence-grid   { grid-template-columns: 1fr; }
+  .standards-grid { grid-template-columns: 1fr; }
+
+  .footer-urgence-btns { flex-direction: column; align-items: stretch; }
+  .btn-urgence-call, .btn-urgence-devis { width: 100%; justify-content: center; }
+
+  .actions { flex-direction: column; }
+  .btn { width: 100%; }
+}
