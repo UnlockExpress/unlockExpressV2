@@ -713,4 +713,11 @@ a { color: inherit; text-decoration: none; }
 
   .actions { flex-direction: column; }
   .btn { width: 100%; }
+
+  .services .service-card,
+.services-grid .service-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
 }
