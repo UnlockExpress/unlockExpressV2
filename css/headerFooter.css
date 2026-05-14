@@ -449,6 +449,7 @@ i.snap {
 @media (max-width:480px) {
   .footer-top {
     grid-template-columns: 1fr;
+    justify-items: center;
   }
 
 }
