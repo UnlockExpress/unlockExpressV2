@@ -1168,6 +1168,20 @@ ul {
   cursor: pointer;
   color: var(--dark);
 }
+@media (max-width:500px) {
+
+.faq-card {
+  height: 60px;
+}
+
+.faq-question {
+  padding: 1rem 3.2rem 1.3rem 1.8rem;
+  font-size: .78rem;
+}
+.faq-answer {
+  font-size: .78rem;
+}
+}
 
 .faq-card>i {
   position: absolute;
