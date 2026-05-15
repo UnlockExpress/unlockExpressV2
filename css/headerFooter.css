@@ -229,8 +229,9 @@
 
   div.follow-us div.follow-social {
     display: flex;
-    justify-content: space-around;
-    width: 60%;
+    justify-content: center;
+    gap: 10px;
+    width: 70%;
     margin: 20px auto;
     align-content: center;
   }
@@ -238,8 +239,7 @@
   div.follow-social a {
     display: block;
     color: var(--dark);
-    font-size: 1.1rem;
-    margin: 0 10px;
+    font-size: 0.88rem;
   }
   div.follow-social a.star {
     color: rgb(0, 70, 167);
