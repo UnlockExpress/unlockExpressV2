@@ -95,6 +95,11 @@
   background: rgba(245, 197, 24, .1);
 }
 
+.nav-links li a.active {
+  color: var(--gold);
+  background: rgba(245, 197, 24, .1);
+}
+
 .emergency-contact {
   flex-shrink: 0;
 }
@@ -203,6 +208,10 @@
     left: 0;
     transform: none;
     top: 0;
+  }
+
+  .logo {
+    font-size: 1rem;
   }
 }
 
@@ -451,5 +460,7 @@ i.snap {
     grid-template-columns: 1fr;
     justify-items: center;
   }
-
+  .badge {
+    font-size: .7rem !important;
+  }
 }
