@@ -366,8 +366,8 @@ main {
     grid-template-rows: repeat(3, 1fr);
     width: 300px;
   }
-}
 
+}
 
 /* =============================================
    FAQ
@@ -407,7 +407,7 @@ main {
   background: var(--off-white);
   border: 1px solid #e5e8ef;
   border-radius: var(--radius-md);
-  height: 58px;
+  height: 70px;
   overflow: hidden;
   position: relative;
   cursor: default;
@@ -419,13 +419,27 @@ main {
 }
 
 .faq-question {
-  padding: 1rem 3.2rem 1rem 1.3rem;
+  padding: 1rem 3.2rem 1.8rem 1.8rem;
   font-weight: 600;
-  font-size: .92rem;
+  font-size: .88rem;
   cursor: pointer;
   color: var(--dark);
 }
+@media (max-width:500px) {
 
+.faq-card {
+  height: 60px;
+}
+
+.faq-question {
+  padding: 1rem 3.2rem 1.3rem 1.8rem;
+  font-size: .78rem;
+}
+.faq-answer {
+  font-size: .78rem;
+}
+
+}
 .faq-card>i {
   position: absolute;
   right: 1.1rem;
