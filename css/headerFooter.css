@@ -195,8 +195,8 @@
 
 
   .nav-links li {
-    align-self: start;
-    margin-left: 25%;
+    margin: auto;
+    width: 150px;
   }
 
   .nav-links li i {
