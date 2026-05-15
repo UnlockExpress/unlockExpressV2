@@ -177,7 +177,7 @@
     position: absolute;
     top: 100%;
     right: 0;
-    width: 80%;
+    width: 90%;
     flex-direction: column;
     background: var(--white);
     backdrop-filter: blur(18px);
