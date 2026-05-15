@@ -58,3 +58,13 @@ window.addEventListener("scroll", () => {
     }
 });
 
+
+const links = document.querySelectorAll("a[href='#why-us'], a[href='#avis']")
+links.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        links.forEach(link => {
+            link.classList.remove('active')
+        })
+        e.target.classList.add('active')
+    })
+})
