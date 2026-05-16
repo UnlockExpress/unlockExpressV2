@@ -47,6 +47,11 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+  color: var(--muted);
+}
+
 body {
   font-family: 'Inter',
     var(--roboto),
@@ -85,81 +90,6 @@ body::before {
   z-index: -1;
 }
 
-/* =========================================================
-   HEADER
-========================================================= */
-.header {
-  background: var(--hero);
-
-  padding: 18px 42px;
-
-  position: relative;
-  overflow: hidden;
-}
-
-.header::before {
-  content: "";
-
-  position: absolute;
-  inset: 0;
-
-  background:
-    radial-gradient(circle at 20% 30%,
-      rgba(59, 130, 246, .14),
-      transparent 35%);
-}
-
-.header-container {
-  max-width: 1600px;
-  margin: auto;
-
-  position: relative;
-  z-index: 2;
-}
-
-.header-logo {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-
-  text-decoration: none;
-  color: #fff;
-}
-
-.header-logo i {
-  width: 48px;
-  height: 48px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  border-radius: 14px;
-
-  background: rgba(255, 255, 255, .08);
-
-  font-size: 18px;
-
-  backdrop-filter: blur(8px);
-}
-
-.header-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.brand {
-  font-size: 18px;
-  font-weight: 650;
-  letter-spacing: -.02em;
-}
-
-.sub {
-  font-size: 13px;
-  color: rgba(255, 255, 255, .7);
-
-  font-weight: 400;
-}
 
 /* =========================================================
    CONTAINER
@@ -167,15 +97,14 @@ body::before {
 .container {
   max-width: 1100px;
   margin: auto;
-  padding:
-    60px 130px 120px;
+  padding: 60px 130px 120px;
 }
 
 /* =========================================================
    NAV
 ========================================================= */
-nav {
-  margin-bottom: 18px;
+nav.fil-nav {
+  margin: 100px 0 18px;
 }
 
 nav ul {
@@ -183,7 +112,6 @@ nav ul {
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
-
   list-style: none;
   
 }
@@ -724,3 +652,4 @@ tr:last-child td {
     min-width: 160px;
   }
 }
+
