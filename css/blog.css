@@ -248,9 +248,9 @@ body {
 }
 
 .tag-new {
-  background: rgba(201, 160, 0, 0.10);
-  color: var(--gold-dark);
-  border: 1px solid rgba(201, 160, 0, 0.30);
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #1D4ED8;
 }
 
 .tag-new svg {
